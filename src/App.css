@@ -1,0 +1,781 @@
+
+.job-portal {
+  font-family: 'Source Sans Pro', sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+.logo {
+  height: 40px;
+  width: 50px;
+  border-radius: 10%;
+  object-fit: cover;
+  opacity: 1 !important; /* Force logo visibility */
+  transition: transform 0.3s ease; /* Keep only transform transition */
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Remove the previous logo opacity rules */
+.logo:not([src]) {
+  opacity: 1;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: white;
+  padding: 4px;
+  height: 40px;
+  border-bottom: 2px solid lightgreen;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: blue;
+  width: 100%;
+  top: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 550;
+  font-size: 14px;
+  padding-left: 30px;
+}
+
+.navbar .nav-links a {
+  color: #1a0e86;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #ffd700;
+}
+
+.nav-links li a {
+  color: black;
+  text-decoration: none;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 8px;
+  height: 60px;
+  width: 100%;
+  background-color: rgba(40, 40, 231, 0.836);
+}
+
+.search-heading {
+  color: #f1f1f1;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.search-input {
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  height: 12px;
+  font: inherit;
+  width: 400px;
+  font-size: smaller;
+}
+
+.set-location {
+  padding: 2px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+  height: 30px;
+  outline: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+option {
+  font-size: smaller;
+}
+
+select {
+  font-size: smaller;
+}
+
+.set-experience,
+.set-salary {
+  padding: 2px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 180px;
+  height: 30px;
+  outline: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.filter-card {
+  width: 300px;
+  height: 90vh;
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 20px;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.filter-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.filter-section {
+  margin-bottom: 16px;
+}
+
+.filter-label {
+  display: block;
+  font-size: 12px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.filter-input {
+  width: 80%;
+  padding: 8px 12px;
+  font-size: 12px;
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
+  outline: none;
+}
+
+.filter-input:focus {
+  border-color: black;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.filter-dropdown {
+  border-top: 1px solid #f0f0f0;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: 2.5s;
+}
+
+.dropdown-header {
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+}
+
+.dropdown-icon {
+  font-size: 12px;
+  color: black;
+}
+
+.dropdown-content {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #555;
+}
+
+.checkbox-label {
+  display: block;
+  margin: 8px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.checkbox-label input {
+  margin-right: 8px;
+  color: #f1f1f1;
+}
+
+.job-listing {
+  width: 42vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.job-card {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 8px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+  min-height: 240px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #0033cc;
+  color: white;
+}
+
+.btn-login,
+.btn-search {
+  background-color: #ffd700;
+  color: black;
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 550;
+  font-size: smaller;
+}
+
+.btn-login:hover {
+  background-color: #4366a7;
+  border: none;
+}
+
+.right-side {
+  display: flex;
+  gap: 10px;
+}
+
+.job-header {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  height: 50px;
+}
+
+.logo {
+  height: 40px;
+  width: 50px;
+  border-radius: 10%;
+  object-fit: cover;
+}
+
+.job-company {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 2px 0 2px 4px;
+  color: #333333;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  gap: 10px;
+}
+
+.details {
+  background-color: #00a8a8;
+  padding: 10.4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 47%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.btn-apply {
+  width: 47%;
+  height: 37.5px;
+  background-color: black;
+  color: white;
+  padding-right: 48px;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.btn-jobseeker-login {
+  background-color: white;
+  border: 1px solid grey;
+  cursor: pointer;
+  font-weight: 550;
+  font-size: smaller;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.btn-jobseeker-login:hover {
+  background-color: #ffd700;
+  border: none;
+}
+
+.status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 26px;
+  border-bottom: 2px solid lightgreen;
+}
+
+.status-text {
+  font-size: smaller;
+  color: rgb(5, 246, 5);
+  font-weight: 600;
+  padding: 1px;
+}
+
+.app-promo {
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  height: auto;
+  min-height: 160px;
+  width: 100%;
+  max-width: 320px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.app-promo-text {
+  color: #152cde;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 30px;
+  font-weight: 100;
+  margin: 20px 40px;
+  font-size: large;
+}
+
+.app-promo-img {
+  margin: 10px 70px;
+  max-width: 100%;
+  height: auto;
+}
+
+.name-txt {
+  margin-left: 15px;
+}
+
+.page-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 40vw;
+  margin: 20px 0;
+  background-color: #f1f1f1;
+  padding: 0 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.current-page-dropdown {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.current-page-dropdown select {
+  height: 22px;
+  width: 50px;
+}
+
+.current-page-dropdown .p1 {
+  font-weight: 550;
+  font-size: small;
+}
+
+.current-page-dropdown .p2 {
+  font-weight: lighter;
+  font-size: small;
+}
+
+.range-total {
+  font-size: small;
+}
+
+.footer {
+  background-color: #f0f8ff;
+  padding: 20px 10px;
+  border-top: 2px solid #ddd;
+  text-align: center;
+}
+
+.footer h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.footer .tags {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.jobs {
+  display: flex;
+  height: auto;
+  min-height: 120px;
+  flex-wrap: wrap;
+}
+
+.india-jobs,
+.inter-jobs {
+  width: 50%;
+  min-width: 300px;
+  flex: 1;
+}
+
+.v1 {
+  border-left: 6px solid white;
+  height: 130px;
+  margin-top: 0;
+}
+
+.footer .tags a {
+  color: #555;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer .tags a:hover {
+  text-decoration: underline;
+}
+
+.footer .stats {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer .stats div {
+  margin: 0 55px;
+}
+
+.footer .stats div span {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+.footer .disclaimer {
+  margin: 20px auto;
+  max-width: 800px;
+  font-size: 0.85em;
+  color: #777;
+  line-height: 1.4;
+  padding: 0 15px;
+}
+
+.footer .social-media {
+  margin-top: 20px;
+}
+
+.footer .social-media a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.footer .social-media a:hover {
+  color: #007bff;
+}
+
+.footer .startup-recognition {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #777;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .search-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+    gap: 15px;
+  }
+
+  .search-input,
+  .set-location,
+  .set-experience,
+  .set-salary {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .job-listing {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .filter-card {
+    width: 100%;
+    margin: 20px 0;
+    height: auto;
+    max-height: 80vh;
+  }
+
+  .page-detail {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    padding: 10px;
+    gap: 1rem;
+  }
+
+  .jobs {
+    flex-direction: column;
+  }
+
+  .india-jobs,
+  .inter-jobs {
+    width: 100%;
+  }
+
+  .footer .stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer .stats div {
+    margin: 10px 0;
+  }
+
+  .app-promo {
+    margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .right-side {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .btn-login,
+  .btn-jobseeker-login {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .job-card {
+    margin: 5px 0;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .details,
+  .btn-apply {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .current-page-dropdown {
+    justify-content: center;
+  }
+
+  .page-detail {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Apply animations to elements */
+.job-card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.nav-links a {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffd700;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+.btn-apply {
+  animation: pulse 2s infinite;
+  transition: all 0.3s ease;
+}
+
+.btn-apply:hover {
+  animation: none;
+  transform: scale(1.05);
+}
+
+.search-bar {
+  animation: slideIn 0.5s ease-out;
+}
+
+.status-text {
+  background: linear-gradient(90deg, transparent, rgba(5, 246, 5, 0.2), transparent);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+.filter-card {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.footer .stats div span {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Add hover animations */
+.job-card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-login:hover,
+.btn-jobseeker-login:hover {
+  transform: translateY(-1px);
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+/* Loading animation for images */
+.logo {
+  transition: opacity 0.3s ease;
+}
+
+.logo:not([src]) {
+  opacity: 0;
+}
+
+/* Smooth transitions for responsive design */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .contact-section {
+    transition: all 0.3s ease-in-out;
+  }
+}
