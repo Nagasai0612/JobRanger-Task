@@ -1,4 +1,3 @@
-<img width="941" alt="jobringer-pic1" src="https://github.com/user-attachments/assets/aec8ff93-2166-493d-836f-0f378f2ef578" />
 
 ![jobringer-pic2](https://github.com/user-attachments/assets/2ad9e139-9a7f-4d07-b83c-279b2a684031)
 
