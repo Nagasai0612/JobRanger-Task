@@ -1,7 +1,4 @@
 
-![jobringer-pic2](https://github.com/user-attachments/assets/2ad9e139-9a7f-4d07-b83c-279b2a684031)
-
-
 # Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
